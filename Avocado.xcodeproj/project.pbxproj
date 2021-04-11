@@ -11,6 +11,10 @@
 		882EEFC22620DDC200D7BEE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882EEFC12620DDC200D7BEE3 /* ContentView.swift */; };
 		882EEFC42620DDC300D7BEE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882EEFC32620DDC300D7BEE3 /* Assets.xcassets */; };
 		882EEFC72620DDC300D7BEE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882EEFC62620DDC300D7BEE3 /* Preview Assets.xcassets */; };
+		88FF014F26231703002D7720 /* AvocadoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF014E26231703002D7720 /* AvocadoView.swift */; };
+		88FF015226231725002D7720 /* RipeningStagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF015126231725002D7720 /* RipeningStagesView.swift */; };
+		88FF015526231744002D7720 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF015426231744002D7720 /* SettingsView.swift */; };
+		88FF01582623176C002D7720 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF01572623176C002D7720 /* AppView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		882EEFC32620DDC300D7BEE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		882EEFC62620DDC300D7BEE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		882EEFC82620DDC300D7BEE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FF014E26231703002D7720 /* AvocadoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadoView.swift; sourceTree = "<group>"; };
+		88FF015126231725002D7720 /* RipeningStagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningStagesView.swift; sourceTree = "<group>"; };
+		88FF015426231744002D7720 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		88FF01572623176C002D7720 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +60,10 @@
 		882EEFBE2620DDC200D7BEE3 /* Avocado */ = {
 			isa = PBXGroup;
 			children = (
+				88A74AAC262311F70020F753 /* View */,
+				88A74AAB262311F10020F753 /* Model */,
+				88A74AAA262311E30020F753 /* Data */,
 				882EEFBF2620DDC200D7BEE3 /* AvocadoApp.swift */,
-				882EEFC12620DDC200D7BEE3 /* ContentView.swift */,
 				882EEFC32620DDC300D7BEE3 /* Assets.xcassets */,
 				882EEFC82620DDC300D7BEE3 /* Info.plist */,
 				882EEFC52620DDC300D7BEE3 /* Preview Content */,
@@ -67,6 +77,32 @@
 				882EEFC62620DDC300D7BEE3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		88A74AAA262311E30020F753 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		88A74AAB262311F10020F753 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88A74AAC262311F70020F753 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				882EEFC12620DDC200D7BEE3 /* ContentView.swift */,
+				88FF014E26231703002D7720 /* AvocadoView.swift */,
+				88FF015126231725002D7720 /* RipeningStagesView.swift */,
+				88FF015426231744002D7720 /* SettingsView.swift */,
+				88FF01572623176C002D7720 /* AppView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FF015526231744002D7720 /* SettingsView.swift in Sources */,
 				882EEFC22620DDC200D7BEE3 /* ContentView.swift in Sources */,
+				88FF01582623176C002D7720 /* AppView.swift in Sources */,
+				88FF015226231725002D7720 /* RipeningStagesView.swift in Sources */,
+				88FF014F26231703002D7720 /* AvocadoView.swift in Sources */,
 				882EEFC02620DDC200D7BEE3 /* AvocadoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
