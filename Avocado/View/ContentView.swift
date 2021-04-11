@@ -25,18 +25,25 @@ struct ContentView: View {
                     }
                 }
                 
+                //MARK: - Dishes
+                Text("Avocado Dishes")
+                    .fontWeight(.bold)
+                    .modifier(TitleModifier())
+                
+                DishesView()
+                    .frame(maxWidth: 640)
+                
                 //MARK: - Footer
                 VStack(alignment: .center, spacing: 20) {
                     Text("All About Avocado")
-                        .font(.system(.title, design: .serif))
                         .fontWeight(.bold)
-                        .foregroundColor(Color("ColorGreenAdaptive"))
-                        .padding(8)
+                        .modifier(TitleModifier())
                     
                     Text("Everything you wanted to know about avocados but were too afraid to ask.")
                         .font(.system(.body, design: .serif))
                         .multilineTextAlignment(.center)
                         .foregroundColor(.gray)
+                        .frame(minHeight: 60)
                 }
                 .frame(maxWidth: 640)
                 .padding()
@@ -45,6 +52,15 @@ struct ContentView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .padding(0)
+    }
+}
+
+struct TitleModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(.title, design: .serif))
+                .foregroundColor(Color("ColorGreenAdaptive"))
+                .padding(8)
     }
 }
 //MARK: - Preview
