@@ -9,12 +9,13 @@ import SwiftUI
 
 struct RipeningView: View {
     //MARK: - Properties
+    var ripening: Ripening
     @State private var slideInAnimation: Bool = false
     //MARK: - Body
     
     var body: some View {
         VStack {
-            Image("avocado-ripening-1")
+            Image(ripening.image)
                 .resizable()
                 .frame(width: 100, height: 100, alignment: .center)
                 .clipShape(Circle())
@@ -36,7 +37,7 @@ struct RipeningView: View {
                 
                 // Stage
                 VStack(alignment: .center, spacing: 10) {
-                    Text("1")
+                    Text(ripening.stage)
                         .font(.system(.largeTitle, design: .serif))
                         .fontWeight(.bold)
                     
@@ -49,7 +50,7 @@ struct RipeningView: View {
                 .frame(width: 180)
                 
                 // Title
-                Text("Hard")
+                Text(ripening.title)
                     .font(.system(.title, design: .serif))
                     .fontWeight(.bold)
                     .foregroundColor(Color("ColorGreenMedium"))
@@ -64,14 +65,14 @@ struct RipeningView: View {
                 
                 // Description
                 Spacer()
-                Text("Fresh off the tree, avocado is very hard with no give.")
+                Text(ripening.description)
                     .foregroundColor(Color("ColorGreenDark"))
                     .fontWeight(.bold)
                     .lineLimit(nil)
                 Spacer()
                 
                 // Ripeness
-                Text("5+ Days")
+                Text(ripening.ripeness.uppercased())
                     .foregroundColor(.white)
                     .font(.system(.callout, design: .serif))
                     .fontWeight(.bold)
@@ -86,7 +87,7 @@ struct RipeningView: View {
                     )
                 
                 // Instruction
-                Text("Hold avocados at room temperature until they are fully ripe.")
+                Text(ripening.instruction)
                     .font(.footnote)
                     .foregroundColor(Color("ColorGreenLight"))
                     .fontWeight(.bold)
@@ -112,6 +113,6 @@ struct RipeningView: View {
 
 struct RipeningView_Previews: PreviewProvider {
     static var previews: some View {
-        RipeningView()
+        RipeningView(ripening: ripeningData[0])
     }
 }
